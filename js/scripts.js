@@ -1,16 +1,27 @@
-const addButton = document.getElementById("add-data");
-const heading = document.querySelector("h1");
-const list = document.getElementById("mylist");
+if(document.readyState !== "loading") {
+  console.log("Document is ready!");
+  initializeCode();
+} else {
+  document.addEventListener("DOMContentLoaded", function() {
+      console.log("Document is ready after waiting!");
+      initializeCode();
+  })
+}
 
-const textArea = document.getElementById("textArea")
+function initializeCode() { 
+  const addButton = document.getElementById("add-data");
+  const heading = document.querySelector("h1");
+  const list = document.getElementById("mylist");
 
-addButton.addEventListener("click", function() {
-  console.log("Hello World");
-  heading.textContent = "My notebook";
+  const textArea = document.getElementById("textArea")
 
-  const newItem = document.createElement("li");
-  const text = document.createTextNode(textArea.value);
-  newItem.appendChild(text);
-  list.appendChild(newItem);
-});
+  addButton.addEventListener("click", function() {
+    console.log("Hello World");
+    heading.textContent = "My notebook";
 
+    const newItem = document.createElement("li");
+    const text = document.createTextNode(textArea.value);
+    newItem.appendChild(text);
+    list.appendChild(newItem);
+  });
+}
