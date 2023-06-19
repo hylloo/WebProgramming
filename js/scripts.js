@@ -26,5 +26,6 @@ function initializeCode() {
   });
   myButton.addEventListener("click", function() {
     heading.textContent = "My notebook";
+    console.log("Hello World");
   });
 }
