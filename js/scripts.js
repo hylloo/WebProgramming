@@ -17,7 +17,6 @@ function initializeCode() {
   const textArea = document.getElementById("textArea")
 
   addButton.addEventListener("click", function() {
-    console.log("Hello World");
 
     const newItem = document.createElement("li");
     const text = document.createTextNode(textArea.value);
