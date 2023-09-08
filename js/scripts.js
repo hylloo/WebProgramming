@@ -24,7 +24,7 @@ function initializeCode() {
     list.appendChild(newItem);
   });
   myButton.addEventListener("click", function() {
-    heading.textContent = "My notebook";
-    console.log("Hello World");
+    heading.textContent = "Moi maailma";
+    console.log("hello world");
   });
 }
