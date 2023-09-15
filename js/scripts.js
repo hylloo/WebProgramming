@@ -11,7 +11,6 @@ function enmptyTableContent(){
 
 }
 function initializeCode() {
-  let imageUrl = "";
   const form = document.getElementById("user-form");
   const table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
   const clearTableButton = document.getElementById("clearTableButton");
