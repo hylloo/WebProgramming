@@ -19,6 +19,9 @@ function initializeCode() {
   const addUserButton = document.getElementById("submit-data");
   const clearTableButton = document.getElementById("clearTableButton");
 
+  addInitialUser("User 1", "user1@example.com", false);
+  addInitialUser("User 2", "user2@example.com", true);
+
 
   addUserButton.addEventListener("click", function() {
       const name = nameInput.value;
@@ -69,6 +72,18 @@ function initializeCode() {
       table.removeChild(table.firstChild);
   }
 });
+
+function addInitialUser(name, email, adminStatus, imageFileName) {
+  const existingRow = table.insertRow(table.rows.length);
+  const cell1 = existingRow.insertCell(0);
+  const cell2 = existingRow.insertCell(1);
+  const cell3 = existingRow.insertCell(2);
+
+  cell1.innerHTML = name;
+  cell2.innerHTML = email;
+  cell3.innerHTML = adminStatus ? "X" : "-";
+}
+
 
 function displayImage(cell, imageFile) {
   const image = document.createElement("img");
