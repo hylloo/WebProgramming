@@ -9,9 +9,25 @@
 
 <body>
   <h1>Hello world</h1>
-  <textarea id ="textArea"></textarea>
-  <button id = "my-button">my-button</button>
-  <button id = "add-data">List Text</button>
+  <div id="table-container"></div>
+  <input type="text" id="input-username" placeholder="Give Name">
+  <input type="text" id="input-email" placeholder="Give Email">
+  <input type="checkbox" id="input-admin"> Admin Status
+  <input type="file" id="input-image" accept="image/*">
+  <button id="submit-data">Add User</button>
+  <table id="myTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Admin</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+  <button id="clearTableButton">Empty Data</button>
   <div id="app"></div>
 
   </button>
@@ -23,3 +39,4 @@
 </body>
 
 </html>
+
